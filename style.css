@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:ital@0;1&display=swap');
+*{
+  box-sizing: border-box;
+  margin: 0;
+}
+:root{
+  --white: hsl(0, 0%, 100%);
+  --light-grey: hsl(217, 12%, 63%);
+  --medium-grey: hsl(216, 12%, 54%);
+  --dark-blue: hsl(213, 19%, 18%);
+  --very-dark-blue: hsl(216, 12%, 8%);
+  --orange: hsl(25, 97%, 53%);
+  --slightly-light-grey: hsl(213, 16%, 26%);
+}
+body {
+  font-family: "Overpass", sans-serif;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-width: 375px;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--very-dark-blue);
+}
+.content,
+.thank-you {
+  padding: 1.5em;
+  margin: 1em;
+  background-color: var(--dark-blue);
+  border-radius: 5%;
+  width: 343px;
+}
+.img-content img {
+  background-color: var(--slightly-light-grey);
+  border-radius: 50%;
+  padding: 1em;
+}
+.text-content h1 {
+  color: var(--white);
+  margin: 0.8em 0 0.8em;
+  font-size: 26px;
+}
+.text-content p {
+  color: hsl(217, 12%, 63%);
+  font-size: 15px;
+  line-height: 1.2em;
+  margin-bottom: 2em;
+}
+.rating-content {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 2em;
+}
+.rate{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.circle {
+  appearance:none;
+  background-color: hsl(213, 16%, 26%);
+  border-radius: 50%;
+  border: none;
+  width: 3.2em;
+  height: 3.2em;
+  color: var(--white);
+  cursor: pointer;
+  transition: 0.8s;
+}
+.circle:hover {
+  background-color: var(--orange);
+}
+.circle:checked {
+  background-color: hsl(217, 12%, 63%);
+}
+.rate span{
+  position: absolute;
+  top: 13px;
+  left: 16px;
+  color: rgb(188, 188, 188);
+  cursor: pointer;
+}
+.sub-content button,
+.thank-you button {
+  width: 100%;
+  color: var(--white);
+  text-transform: uppercase;
+  padding: 1em 0 0.8em;
+  background-color: var(--orange);
+  border-radius: 30px;
+  border: none;
+  font-family: inherit;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.sub-content button:hover,
+.thank-you button:hover {
+  background-color: var(--white);
+  color: var(--orange);
+}
+.thank-you {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.thank-you img {
+  display: block;
+  margin: 0 auto 2em;
+}
+.selection-msg {
+  color: var(--orange);
+}
+.selection-msg p {
+  font-size: 15px;
+  background-color: hsl(213, 16%, 26%);
+  border-radius: 30px;
+  padding: 0.4em 0.7em;
+}
+.thank-you h1 {
+  font-size: 26px;
+  margin: 1em 0 0.5em;
+  color: var(--white);
+}
+.appreciation {
+  color: hsl(216, 12%, 54%);
+  margin-bottom: 1em;
+}
+
+@media (min-width:1000px) {
+  .content,.thank-you{
+    width: 400px;
+  }
+  .circle{
+    width: 3.6em;
+    height: 3.6em;
+  }
+  .rate span{
+    top: 15px;
+    left: 18.5px;
+  }
+}
